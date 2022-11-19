@@ -12,7 +12,7 @@ The Link Tree page contains:
 
 The page is built using simple React concepts. In more detail:
 
-- React components are used so as to separate concerns and make code more neat
+- React **components** are used so as to separate concerns and make code more neat
 - React `useState` hook is used to store the state of the errorMessage, that occurs if the sharing functionality fails. The errorMessageHandler function is used to change the errorMessage value
 - React `useEffect` is exploited to re-render the components that depend on the change of the errorMessage. A modal is displayed momentarily to inform user about the failure with a explanatory message
 - React `Context` Hook is used so as to share `errorMessage` state and its handler function to all nested components inside App component
