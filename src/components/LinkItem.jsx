@@ -1,22 +1,48 @@
+import { useContext } from "react";
+import { errorContext } from "../App";
+
 function LinkItem({ link, text, icon }) {
+  const { errorMessage, errorMessageHandler } = useContext(errorContext);
+
+  const shareHandler = () => {
+    if (navigator.share) {
+      errorMessageHandler("");
+      navigator
+        .share({
+          url: `https://share.toogoodtogo.com/store/1006/milestones/meals-saved/`,
+        })
+        .catch(() => {
+          errorMessageHandler("Failed to share, please try again");
+        });
+    } else {
+      errorMessageHandler("The browser does not support the Web Share API");
+    }
+  };
+
   return (
-    <a
-      className="relative block mt-0 mb-3 mx-3 p-4 bg-accentColor text-bgColor 
+    <ul
+      className="mt-0 mb-3 mx-3 p-4 bg-accentColor text-bgColor
       border-none rounded-lg text-base min-w-[240px]
-      hover:bg-hoverColor hover:animate-bounceIn hover:scale-105"
-      href={link}
-      target="_blank"
+      hover:bg-hoverColor hover:animate-bounceIn hover:scale-105
+      list-none m-0 flex justify-between items-center"
     >
-      <ul className="list-none p-0 m-0 flex justify-between items-center">
+      <a href={link} target="_blank">
         <li className="inline whitespace-nowrap">
           <i className={`fa-2xl ${icon}`} />
         </li>
-        <li className="inline font-medium text-center max-w-[65%]">{text}</li>
-        <li className="inline whitespace-nowrap">
-          <i className="fa-xl fa-solid fa-arrow-up-from-bracket"></i>
-        </li>
-      </ul>
-    </a>
+      </a>
+      <a href={link} target="_blank">
+        <li className="mx-3 font-medium text-center">{text}</li>
+      </a>
+      <button
+        onClick={shareHandler}
+        className="inline whitespace-nowrap "
+        type="button"
+        title="Share Link"
+      >
+        <i className="fa-xl fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+    </ul>
   );
 }
 

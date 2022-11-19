@@ -24,9 +24,14 @@ module.exports = {
           "75%": { transform: "scale(1.03)" },
           "90%": { transform: "scale(1.02)" },
         },
+        slideInFromTop: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         bounceIn: "bounceIn 0.08s",
+        slideInFromTop: "slideInFromTop 0.8s",
       },
       scale: {
         105: "1.01",
