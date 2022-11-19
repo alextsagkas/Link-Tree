@@ -1,8 +1,9 @@
 import { useContext } from "react";
+
 import { errorContext } from "../App";
 
 function LinkItem({ link, text, icon }) {
-  const { errorMessage, errorMessageHandler } = useContext(errorContext);
+  const { errorMessageHandler } = useContext(errorContext);
 
   const shareHandler = () => {
     if (navigator.share) {

@@ -1,10 +1,11 @@
-import { Fragment } from "react";
-
 import LinkItem from "./linkItem";
 
 function LinkList() {
   return (
-    <Fragment>
+    <section
+      title="Link List Section"
+      className="max-w-2xl min-w-xs block w-0.95 my-7 mx-auto"
+    >
       <LinkItem
         link="https://cloud.iaps.info/s/FZW87xHtCofxZiY"
         text="jIAPS 2022"
@@ -40,7 +41,7 @@ function LinkList() {
         text="IAPS Discord Server"
         icon="fa-brands fa-discord"
       />
-    </Fragment>
+    </section>
   );
 }
 
