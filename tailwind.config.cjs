@@ -13,7 +13,6 @@ module.exports = {
         bgColor: "#fff",
         accentColor: "#0257a8",
         hoverColor: "#0f60b0",
-        linkColor: "#4c4c4c",
         textColor: "#000",
       },
       keyframes: {

@@ -10,7 +10,9 @@ function LinkItem({ link, text, icon }) {
       errorMessageHandler("");
       navigator
         .share({
-          url: `https://share.toogoodtogo.com/store/1006/milestones/meals-saved/`,
+          title: { text },
+          text: { text },
+          url: { link },
         })
         .catch(() => {
           errorMessageHandler("Failed to share, please try again");
