@@ -5,14 +5,14 @@ import { errorContext } from "../App";
 function LinkItem({ link, text, icon }) {
   const { errorMessageHandler } = useContext(errorContext);
 
-  const shareHandler = () => {
+  const shareHandler = async () => {
     if (navigator.share) {
       errorMessageHandler("");
-      navigator
+      await navigator
         .share({
-          title: { text },
-          text: { text },
-          url: { link },
+          title: text,
+          text: text,
+          url: link,
         })
         .catch(() => {
           errorMessageHandler("Failed to share, please try again");
