@@ -1,7 +1,5 @@
 # IAPS Link Tree with ReactJS
 
-The Link Tree app can be found on the following URL: [Link Tree App with ReactJS](https://link.iaps.info/?fbclid=IwAR34I_TyXG8P-9uzhVR63lCED2Mtkg1lZlWigoQ1hukRIqIGYuzif8pQ0Yg)
-
 ## Outline
 
 The Link Tree page contains:
