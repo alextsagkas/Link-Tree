@@ -1,4 +1,4 @@
-import LinkItem from "./LinkItem";
+import LinkItem from "/src/components/LinkItem";
 
 function LinkList() {
   return (
