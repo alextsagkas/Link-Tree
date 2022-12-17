@@ -1,4 +1,4 @@
-import LinkItem from "./linkItem";
+import LinkItem from "./LinkItem";
 
 function LinkList() {
   return (
