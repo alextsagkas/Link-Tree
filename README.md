@@ -24,6 +24,8 @@ For the styling **TailwindCSS** is used.
 - Custom styles and animations are stored in `tailwind.config.cjs` file
 - All the styles are applied directly in `.jsx` component files, which is pretty convenient
 
+For the social media icons **Font Awesome** is used.
+
 ## Bundler
 
 The bundler that was preferred for this app was Vite. I strongly recommend you to try it!
